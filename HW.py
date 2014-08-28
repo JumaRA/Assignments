@@ -27,6 +27,20 @@ def area(r):
 r=10
 area(10)
 
+def absolute_value(n):
+    if n<0:
+        n=-n
+        x=n
+a=10
+b=-10
+if absolute_value(a) == absolute_value(b):
+    print("The absolute values of", a, "and", b, "are equal")
+else:
+    print("The absolute values of", a, "and", b, "are different")
+
+
+
+
 
 
 
