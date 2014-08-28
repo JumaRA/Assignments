@@ -23,9 +23,10 @@ area(4,5)
 from numpy import*
 def area(r):
     x=((pi)*r*r)
-    print(x)
+    print("the area of the circle is =",x)
 r=10
 area(10)
+
 
 
 
