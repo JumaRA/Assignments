@@ -131,4 +131,3 @@ def triangle_area(base,height: Number) -> Number:
     """
     return (1/2)*base*height
 
-
