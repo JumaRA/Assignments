@@ -23,3 +23,16 @@ def Area_Circle(radius: Number) -> Number:
     314.15926
     """
     return (pi*radius*radius)
+
+from numbers import Number
+from numpy import*
+def Circle_Perimeter(radius: Number) -> Number:
+    """
+    calculates the circumference of a circle with a given radius
+    :param radius: radius of the circle
+    :return:Perimeter of the circle
+    >>> Circle_Perimeter(10)
+    62.831853
+    """
+    return (2*pi*radius)
+
