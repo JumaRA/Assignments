@@ -70,3 +70,5 @@ def rectangle_perimeter(length,width):
 
 import geom_formulae
 print(geom_formulae.Trapezium_Area(4,5,5))
+
+print(geom_formulae.Sphere_Area(4))
