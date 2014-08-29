@@ -93,3 +93,26 @@ def Cone_Volume(radius,height: Number) -> Number:
     """
     return (1/3)*pi*radius*radius*height
 
+def Cuboid_Volume(length,width,height: Number) -> Number:
+    """
+    calculates the volume of cube given the length, width and radius
+    :param length: the base length
+    :param width: the base width
+    :param height: height of the cuboid
+    :return:the volume of the cuboid
+    >>>Cuboid_Volume(2,3,4)
+    """
+    return length*width*height
+
+def Trapezium_Area(length1,length2,height: Number) -> Number:
+    """
+    calculates the area of a trapezium using a given length of the parallel sides and the height
+    :param length1: length of the shorter parallel side
+    :param length2: length of the longer parallel side
+    :param height: height of the trapezium
+    :return:the area of the trapezium
+    >>>Trazium_Area(2,4,6)
+    18
+    """
+    return (1/2)*(length1+length2)*height
+
