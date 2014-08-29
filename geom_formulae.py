@@ -80,6 +80,7 @@ def Sphere_Area(radius: Number) -> Number:
     113.097334
     """
     return (4*pi*radius*radius)
+
 from numbers import Number
 from numpy import*
 def Cone_Volume(radius,height: Number) -> Number:
@@ -111,7 +112,7 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
     :param length2: length of the longer parallel side
     :param height: height of the trapezium
     :return:the area of the trapezium
-    >>>Trazium_Area(2,4,6)
+    >>>Trapezium_Area(2,4,6)
     18
     """
     return (1/2)*(length1+length2)*height
