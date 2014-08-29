@@ -116,3 +116,13 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
     """
     return (1/2)*(length1+length2)*height
 
+def Hexagon_Perimeter(side: Number) -> Number:
+    """
+    calculates the perimeter of a regular hexagon, the length of the six sides are all equal
+    :param side: length of the side of the hexagon
+    :return:perimeter of the hexagon
+    >>>Hexagon_Perimeter(10)
+    60
+    """
+    return 6*side
+
