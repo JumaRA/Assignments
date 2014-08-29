@@ -36,3 +36,17 @@ def Circle_Perimeter(radius: Number) -> Number:
     """
     return (2*pi*radius)
 
+from numbers import Number
+from numpy import*
+def Volume_Cylinder(radius,height: Number) -> Number:
+    """
+    Calculates the volume of a cylinder with a given radius and height
+    :param radius: base radius of cylinder
+    :param height: height of the cylinder
+    :return:the volume of the cylinder
+    >>>Volume_Cylinder(7,1)
+    153.93804
+    """
+    return (pi*radius*radius*height)
+
+
