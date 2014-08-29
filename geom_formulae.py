@@ -12,7 +12,6 @@ def area_rectangle(length,width: Number) -> Number:
     """
     return (length*width)
 
-from numbers import Number
 from numpy import*
 def Area_Circle(radius: Number) -> Number:
     """
@@ -24,8 +23,7 @@ def Area_Circle(radius: Number) -> Number:
     """
     return (pi*radius*radius)
 
-from numbers import Number
-from numpy import*
+
 def Circle_Perimeter(radius: Number) -> Number:
     """
     calculates the circumference of a circle with a given radius
@@ -36,8 +34,6 @@ def Circle_Perimeter(radius: Number) -> Number:
     """
     return (2*pi*radius)
 
-from numbers import Number
-from numpy import*
 def Volume_Cylinder(radius,height: Number) -> Number:
     """
     Calculates the volume of a cylinder with a given radius and height
@@ -69,8 +65,6 @@ def Cube_Area(side: Number) -> Number:
     """
     return 6*side*side
 
-from numbers import Number
-from numpy import*
 def Sphere_Area(radius: Number) -> Number:
     """
     calculates the surface area of a sphere with a given radius
@@ -81,8 +75,7 @@ def Sphere_Area(radius: Number) -> Number:
     """
     return (4*pi*radius*radius)
 
-from numbers import Number
-from numpy import*
+
 def Cone_Volume(radius,height: Number) -> Number:
     """
     calculates the volume of cone with a given radius and height
