@@ -39,8 +39,31 @@ else:
     print("The absolute values of", a, "and", b, "are different")
 
 
+from numpy import*
+def perimeter(r):
+    p=(2*(pi)*r)
+    print("circumference of the circle is=",p)
+r=789.99
+perimeter(789.99)
 
+from numbers import Number
+def square_perimeter(side : Number) -> Number:
+    """
+    Calculate perimeter of a square from side length.
+    @param side: the side length
+    @return: the perimeter (same units as side length)
+    >>> square_perimeter(4)
+    16
+    """
+    return 4*side
 
-
+def rectangle_perimeter(length,width):
+    """
+    this formula gives the perimeter of a rectangle, two opposite sides are equal in a
+    rectangle
+    >>>rectangle_perimeter(2,1)
+    6
+    """
+    return 2*(length+width)
 
 
