@@ -122,6 +122,7 @@ def Hexagon_Perimeter(side: Number) -> Number:
     """
     return 6*side
 
+
 def triangle_area(base,height: Number) -> Number:
     """
     calculates the area of a triangle using a given base and height
