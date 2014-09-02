@@ -11,12 +11,14 @@ def area_rectangle(length,width: Number) -> Number:
     >>> area_rectangle(4,8)
     32
     """
-    if (ddmm_validate(length,width)):
-        return length*width
-    elif type(length)==str or type(width)==str:
+    if dim_complete(length) and dim_complete(width):
+        if dim_letter(length) and dim_letter(width):
+            if dim_sign(length) and dim_sign(width):
+                return length*width
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 
@@ -39,7 +41,7 @@ def Area_Circle(radius: Number) -> Number:
     raise AttributeError("dimension not provided")
 
 
-print(Area_Circle(4))
+
 
 
 
@@ -60,7 +62,7 @@ def Circle_Perimeter(radius: Number) -> Number:
         raise TypeError("value is a string")
     raise AttributeError("dimension not provided")
 
-print(Area_Circle(4))
+
 
 
 def Volume_Cylinder(radius,height: Number) -> Number:
@@ -72,12 +74,14 @@ def Volume_Cylinder(radius,height: Number) -> Number:
     >>> Volume_Cylinder(7,1)
     153.93804002589985
     """
-    if (ddmm_validate(radius,height)):
-        return (pi*radius*radius*height)
-    elif type(radius)==str or type(height)==str:
+    if dim_complete(radius) and dim_complete(height):
+        if dim_letter(radius) and dim_letter(height):
+            if dim_sign(radius) and dim_sign(height):
+                return(1/3)*pi*radius*radius*height
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 
@@ -98,7 +102,7 @@ def Cube_Volume(side: Number) -> Number:
                 raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
     raise AttributeError("dimension not provided")
-print(Cube_Volume(2))
+
 
 def Cube_Area(side: Number) -> Number:
     """
@@ -117,6 +121,7 @@ def Cube_Area(side: Number) -> Number:
         raise TypeError("value is a string")
     raise AttributeError("dimension not provided")
 
+
 def Sphere_Area(radius: Number) -> Number:
     """
     calculates the surface area of a sphere with a given radius
@@ -125,13 +130,14 @@ def Sphere_Area(radius: Number) -> Number:
     >>> Sphere_Area(3)
     113.09733552923255
     """
-    if (dim_validate(radius)):
-        return (4*pi*radius*radius)
-    elif type(radius)== str:
+    if dim_complete(radius):
+        if dim_letter(radius):
+            if dim_sign(radius):
+                return(pi*radius*radius)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0: "+str(radius))
-
+    raise AttributeError("dimension not provided")
 
 
 def Cone_Volume(radius,height: Number) -> Number:
@@ -143,12 +149,14 @@ def Cone_Volume(radius,height: Number) -> Number:
     >>> Cone_Volume(7,2)
     102.62536001726657
     """
-    if (ddmm_validate(radius,height)):
-        return (1/3)*pi*radius*radius*height
-    elif type(radius)==str or type(height)==str:
+    if dim_complete(radius) and dim_complete(height):
+        if dim_letter(radius) and dim_letter(height):
+            if dim_sign(radius) and dim_sign(height):
+                return(1/3)*pi*radius*radius*height
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 
@@ -162,12 +170,14 @@ def Cuboid_Volume(length,width,height: Number) -> Number:
     >>> Cuboid_Volume(2,3,4)
     24
     """
-    if (three_validate(length,width,height)):
-        return length*width*height
-    elif type(length)==str or type(width)==str or type(height)==str:
+    if dim_complete(length) and dim_complete(width) and dim_complete(height):
+        if dim_letter(length) and dim_letter(width) and dim_letter(height):
+            if dim_sign(length) and dim_sign(width) and dim_sign(height):
+                return length*width*height
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 def Trapezium_Area(length1,length2,height: Number) -> Number:
@@ -180,12 +190,14 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
     >>> Trapezium_Area(2,4,6)
     18.0
     """
-    if (three_validate(length1,length2,height)):
-        return (1/2)*(length1+length2)*height
-    elif type(length1)==str or type(length2)==str or type(height)==str:
+    if dim_complete(length) and dim_complete(length2) and dim_complete(height):
+        if dim_letter(length1) and dim_letter(length2) and dim_letter(height):
+            if dim_sign(length1) and dim_sign(length2) and dim_sign(height):
+                return (1/2)(length1+length2)*height
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 def Hexagon_Perimeter(side: Number) -> Number:
@@ -196,12 +208,14 @@ def Hexagon_Perimeter(side: Number) -> Number:
     >>> Hexagon_Perimeter(10)
     60
     """
-    if (dim_validate(side)):
-        return 6*side
-    elif type(side)==str:
+    if dim_complete(side):
+        if dim_letter(side):
+            if dim_sign(side):
+                return(side *side*side)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 def triangle_area(base,height: Number) -> Number:
@@ -213,12 +227,14 @@ def triangle_area(base,height: Number) -> Number:
     >>> triangle_area(2,9)
     9.0
     """
-    if (ddmm_validate(base,height)):
-        return (1/2)*base*height
-    elif type(base)==str or type(height)==str:
+    if dim_complete(base) and dim_complete(height):
+        if dim_letter(base) and dim_letter(height):
+            if dim_sign(base) and dim_sign(height):
+                return(1/2)*base*height
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0:")
+    raise AttributeError("dimension not provided")
 
 
 
