@@ -37,6 +37,7 @@ def dim_letter(dim):
     """
     return isinstance(dim, Number)
 
+
 def ddmm_validate(dim1,dim2):
     """
     Tests if ddmm is a Number and is >=0
