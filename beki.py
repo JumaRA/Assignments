@@ -1,5 +1,6 @@
 __author__ = 'rebecca'
 
+
 from numbers import Number
 from validating import *
 def area_rectangle(length,width: Number) -> Number:
@@ -190,7 +191,7 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
     >>> Trapezium_Area(2,4,6)
     18.0
     """
-    if dim_complete(length1) and dim_complete(length2) and dim_complete(height):
+    if dim_complete(length) and dim_complete(length2) and dim_complete(height):
         if dim_letter(length1) and dim_letter(length2) and dim_letter(height):
             if dim_sign(length1) and dim_sign(length2) and dim_sign(height):
                 return (1/2)(length1+length2)*height
@@ -198,6 +199,7 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
                 raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
     raise AttributeError("dimension not provided")
+
 
 def Hexagon_Perimeter(side: Number) -> Number:
     """

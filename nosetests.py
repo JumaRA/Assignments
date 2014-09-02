@@ -1,7 +1,9 @@
 __author__ = 'rebecca'
+from numpy import *
 from geom_formulae import *
+from validating import *
 from nose.tools import *
-from numpy import*
+
 
 def test_area_rectangle_int():
     assert area_rectangle(2,3) == 6
@@ -39,8 +41,6 @@ def test_Volume_Cylinder_int():
 eps = 1e-6
 def test_Volume_Cylinder_double():
     assert 628.3185307179587/2 - eps < Volume_Cylinder(5,4) < 628.3185307179587/2 + eps
-
-
 
 
 
