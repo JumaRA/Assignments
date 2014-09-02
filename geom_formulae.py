@@ -29,12 +29,17 @@ def Area_Circle(radius: Number) -> Number:
     >>> Area_Circle(10)
     314.1592653589793
     """
-    if (dim_validate(radius)):
-        return pi*radius*radius
-    elif type(radius)== str:
+    if dim_complete(radius):
+        if dim_letter(radius):
+            if dim_sign(radius):
+                return(pi*radius*radius)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0: "+str(radius))
+    raise AttributeError("dimension not provided")
+
+
+print(Area_Circle(4))
 
 
 
@@ -46,14 +51,16 @@ def Circle_Perimeter(radius: Number) -> Number:
     >>> Circle_Perimeter(10)
     62.83185307179586
     """
-    if (dim_validate(radius)):
-        return (2*pi*radius)
-    elif type(radius)== str:
+    if dim_complete(radius):
+        if dim_letter(radius):
+            if dim_sign(radius):
+                return(pi*radius*radius)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0: "+str(radius))
+    raise AttributeError("dimension not provided")
 
-
+print(Area_Circle(4))
 
 
 def Volume_Cylinder(radius,height: Number) -> Number:
@@ -83,13 +90,15 @@ def Cube_Volume(side: Number) -> Number:
     >>> Cube_Volume(2)
     8
     """
-    if (dim_validate(side)):
-        return side*side*side
-    elif type(side)== str:
+    if dim_complete(side):
+        if dim_letter(side):
+            if dim_sign(side):
+                return(side *side*side)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0: "+str(side))
-
+    raise AttributeError("dimension not provided")
+print(Cube_Volume(2))
 
 def Cube_Area(side: Number) -> Number:
     """
@@ -99,13 +108,14 @@ def Cube_Area(side: Number) -> Number:
     >>> Cube_Area(4)
     96
     """
-    if (dim_validate(side)):
-        return 6*side*side
-    elif type(side)== str:
+    if dim_complete(side):
+        if dim_letter(side):
+            if dim_sign(side):
+                return(side *side*side)
+            else:
+                raise ValueError("side is less than 0: ")
         raise TypeError("value is a string")
-    else:
-        raise ValueError("side is less than 0: "+str(side))
-
+    raise AttributeError("dimension not provided")
 
 def Sphere_Area(radius: Number) -> Number:
     """

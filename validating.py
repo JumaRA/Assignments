@@ -18,6 +18,25 @@ def dim_validate(dim):
     """
     return isinstance(dim, Number) and dim >= 0
 
+def dim_sign(dim):
+    """
+    Tests if dim is a Number and is >=0
+
+    >>> dim_sign(5)
+    True
+    >>> dim_sign(-5)
+    False
+    """
+    return dim>=0
+
+def dim_letter(dim):
+    """
+    Tests if dim is not a string
+    >>> dim_letter(7)
+    True
+    """
+    return isinstance(dim, Number)
+
 def ddmm_validate(dim1,dim2):
     """
     Tests if ddmm is a Number and is >=0
@@ -46,3 +65,13 @@ def three_validate(dim1,dim2,dim3,):
     False
     """
     return isinstance (dim1, Number) and isinstance (dim2, Number) and isinstance (dim3, Number) and dim1>=0 and dim2>=0 and dim3>=0
+
+def dim_complete(dim):
+    """
+    Tests that dim is provided
+
+    >>> dim_complete(1)
+    True
+      """
+    if dim is not None:
+        return True
