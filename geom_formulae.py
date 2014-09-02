@@ -18,7 +18,7 @@ def area_rectangle(length,width: Number) -> Number:
     else:
         raise ValueError("side is less than 0:")
 
-print(area_rectangle(8,1))
+
 
 from numpy import*
 def Area_Circle(radius: Number) -> Number:
@@ -36,7 +36,7 @@ def Area_Circle(radius: Number) -> Number:
     else:
         raise ValueError("side is less than 0: "+str(radius))
 
-print(Area_Circle(5))
+
 
 def Circle_Perimeter(radius: Number) -> Number:
     """
@@ -53,7 +53,7 @@ def Circle_Perimeter(radius: Number) -> Number:
     else:
         raise ValueError("side is less than 0: "+str(radius))
 
-print (Circle_Perimeter(10))
+
 
 
 def Volume_Cylinder(radius,height: Number) -> Number:
@@ -72,7 +72,7 @@ def Volume_Cylinder(radius,height: Number) -> Number:
     else:
         raise ValueError("side is less than 0:")
 
-print(Volume_Cylinder(8,5))
+
 
 
 def Cube_Volume(side: Number) -> Number:
@@ -89,7 +89,7 @@ def Cube_Volume(side: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0: "+str(side))
-print(Cube_Volume(10))
+
 
 def Cube_Area(side: Number) -> Number:
     """
@@ -105,7 +105,7 @@ def Cube_Area(side: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0: "+str(side))
-print(Cube_Area(10))
+
 
 def Sphere_Area(radius: Number) -> Number:
     """
@@ -121,7 +121,7 @@ def Sphere_Area(radius: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0: "+str(radius))
-print(Sphere_Area(10))
+
 
 
 def Cone_Volume(radius,height: Number) -> Number:
@@ -139,7 +139,7 @@ def Cone_Volume(radius,height: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0:")
-print(Cone_Volume(1,3))
+
 
 
 def Cuboid_Volume(length,width,height: Number) -> Number:
@@ -158,7 +158,7 @@ def Cuboid_Volume(length,width,height: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0:")
-print(Cuboid_Volume(1,2,3))
+
 
 def Trapezium_Area(length1,length2,height: Number) -> Number:
     """
@@ -176,7 +176,7 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0:")
-print(Trapezium_Area(1,1,3))
+
 
 def Hexagon_Perimeter(side: Number) -> Number:
     """
@@ -192,7 +192,7 @@ def Hexagon_Perimeter(side: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0:")
-print(Hexagon_Perimeter(1))
+
 
 def triangle_area(base,height: Number) -> Number:
     """
@@ -209,6 +209,6 @@ def triangle_area(base,height: Number) -> Number:
         raise TypeError("value is a string")
     else:
         raise ValueError("side is less than 0:")
-print(triangle_area(2,2))
+
 
 
