@@ -1,6 +1,7 @@
 __author__ = 'rebecca'
 
 from numbers import Number
+from validating import *
 def area_rectangle(length,width: Number) -> Number:
     """
     calculates the area of a rectangle with given length and width
@@ -10,7 +11,14 @@ def area_rectangle(length,width: Number) -> Number:
     >>> area_rectangle(4,8)
     32
     """
-    return (length*width)
+    if (ddmm_validate(length,width)):
+        return length*width
+    elif type(length)==str or type(width)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+
+print(area_rectangle(8,1))
 
 from numpy import*
 def Area_Circle(radius: Number) -> Number:
@@ -21,8 +29,14 @@ def Area_Circle(radius: Number) -> Number:
     >>> Area_Circle(10)
     314.1592653589793
     """
-    return (pi*radius*radius)
+    if (dim_validate(radius)):
+        return pi*radius*radius
+    elif type(radius)== str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0: "+str(radius))
 
+print(Area_Circle(5))
 
 def Circle_Perimeter(radius: Number) -> Number:
     """
@@ -32,7 +46,14 @@ def Circle_Perimeter(radius: Number) -> Number:
     >>> Circle_Perimeter(10)
     62.83185307179586
     """
-    return (2*pi*radius)
+    if (dim_validate(radius)):
+        return (2*pi*radius)
+    elif type(radius)== str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0: "+str(radius))
+
+print (Circle_Perimeter(10))
 
 
 def Volume_Cylinder(radius,height: Number) -> Number:
@@ -44,7 +65,15 @@ def Volume_Cylinder(radius,height: Number) -> Number:
     >>> Volume_Cylinder(7,1)
     153.93804002589985
     """
-    return (pi*radius*radius*height)
+    if (ddmm_validate(radius,height)):
+        return (pi*radius*radius*height)
+    elif type(radius)==str or type(height)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+
+print(Volume_Cylinder(8,5))
+
 
 def Cube_Volume(side: Number) -> Number:
     """
@@ -54,7 +83,13 @@ def Cube_Volume(side: Number) -> Number:
     >>> Cube_Volume(2)
     8
     """
-    return side*side*side
+    if (dim_validate(side)):
+        return side*side*side
+    elif type(side)== str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0: "+str(side))
+print(Cube_Volume(10))
 
 def Cube_Area(side: Number) -> Number:
     """
@@ -64,7 +99,13 @@ def Cube_Area(side: Number) -> Number:
     >>> Cube_Area(4)
     96
     """
-    return 6*side*side
+    if (dim_validate(side)):
+        return 6*side*side
+    elif type(side)== str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0: "+str(side))
+print(Cube_Area(10))
 
 def Sphere_Area(radius: Number) -> Number:
     """
@@ -74,7 +115,13 @@ def Sphere_Area(radius: Number) -> Number:
     >>> Sphere_Area(3)
     113.09733552923255
     """
-    return (4*pi*radius*radius)
+    if (dim_validate(radius)):
+        return (4*pi*radius*radius)
+    elif type(radius)== str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0: "+str(radius))
+print(Sphere_Area(10))
 
 
 def Cone_Volume(radius,height: Number) -> Number:
@@ -86,7 +133,14 @@ def Cone_Volume(radius,height: Number) -> Number:
     >>> Cone_Volume(7,2)
     102.62536001726657
     """
-    return (1/3)*pi*radius*radius*height
+    if (ddmm_validate(radius,height)):
+        return (1/3)*pi*radius*radius*height
+    elif type(radius)==str or type(height)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+print(Cone_Volume(1,3))
+
 
 def Cuboid_Volume(length,width,height: Number) -> Number:
     """
@@ -98,7 +152,13 @@ def Cuboid_Volume(length,width,height: Number) -> Number:
     >>> Cuboid_Volume(2,3,4)
     24
     """
-    return length*width*height
+    if (three_validate(length,width,height)):
+        return length*width*height
+    elif type(length)==str or type(width)==str or type(height)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+print(Cuboid_Volume(1,2,3))
 
 def Trapezium_Area(length1,length2,height: Number) -> Number:
     """
@@ -110,7 +170,13 @@ def Trapezium_Area(length1,length2,height: Number) -> Number:
     >>> Trapezium_Area(2,4,6)
     18.0
     """
-    return (1/2)*(length1+length2)*height
+    if (three_validate(length1,length2,height)):
+        return (1/2)*(length1+length2)*height
+    elif type(length1)==str or type(length2)==str or type(height)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+print(Trapezium_Area(1,1,3))
 
 def Hexagon_Perimeter(side: Number) -> Number:
     """
@@ -120,8 +186,13 @@ def Hexagon_Perimeter(side: Number) -> Number:
     >>> Hexagon_Perimeter(10)
     60
     """
-    return 6*side
-
+    if (dim_validate(side)):
+        return 6*side
+    elif type(side)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+print(Hexagon_Perimeter(1))
 
 def triangle_area(base,height: Number) -> Number:
     """
@@ -132,6 +203,12 @@ def triangle_area(base,height: Number) -> Number:
     >>> triangle_area(2,9)
     9.0
     """
-    return (1/2)*base*height
+    if (ddmm_validate(base,height)):
+        return (1/2)*base*height
+    elif type(base)==str or type(height)==str:
+        raise TypeError("value is a string")
+    else:
+        raise ValueError("side is less than 0:")
+print(triangle_area(2,2))
 
 
